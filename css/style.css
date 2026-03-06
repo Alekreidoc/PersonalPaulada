@@ -1,0 +1,399 @@
+/* --- VARIÁVEIS DE COR (PALETA 1: DARK & GOLD) --- */
+:root {
+    --bg-main: #121212;
+    --bg-darker: #0a0a0a;
+    --bg-card: #1E1E1E;
+    --text-title: #FFFFFF;
+    --text-body: #A0A0A0;
+    --primary-color: #E5A93A; /* Dourado/Âmbar */
+    --primary-hover: #c48f2e;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem do menu ser suave */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* --- CLASSES GERAIS E LAYOUT --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+h1, h2, h3 {
+    color: var(--text-title);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* --- BOTÕES --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #000; /* Texto preto contrasta melhor no botão dourado */
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px); /* Efeito de levantar no hover */
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 13px 28px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+.btn-large {
+    font-size: 1.1rem;
+    padding: 20px 40px;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* --- 1. HEADER --- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: var(--text-title);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+/* Diminui especificamente o botão que está dentro do header */
+.header .btn-primary {
+    padding: 10px 20px; /* Diminui a "gordura" do botão (cima/baixo e lados) */
+    font-size: 0.85rem; /* Diminui o tamanho da letra */
+}
+
+/* --- 2. HERO SECTION --- */
+.hero {
+    padding-top: 120px; /* Compensa o header fixo */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* --- 3. MÉTODO --- */
+.metodo-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.metodo-image {
+    flex: 1;
+}
+
+.metodo-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.metodo-text {
+    flex: 1;
+}
+
+/* --- 4. DIFERENCIAIS E GRID DE CARDS --- */
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Movimento sutil no mouse */
+    border-color: #333;
+}
+
+.card img {
+    width: 100%; /* Faz a foto ocupar o espaço certinho do card */
+    height: 250px; /* Define uma altura fixa para todas ficarem iguais */
+    object-fit: cover; /* Corta a foto perfeitamente sem amassar ou esticar */
+    border: 3px solid var(--primary-color); /* Cria a moldura amarela/dourada */
+    border-radius: 10px; /* Arredonda os cantos da foto */
+    margin-bottom: 20px;
+}
+
+/* Nova regra para fotos que precisam de mais espaço vertical */
+.card img.foto-ampla {
+    height: 350px; /* Aumentamos de 250px para 350px */
+}
+
+/* --- 5. RELACIONAMENTO --- */
+.relacionamento-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.relacionamento p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* --- 6. PLANOS --- */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card h3 {
+    color: var(--primary-color);
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-title);
+    margin: 20px 0;
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    color: var(--text-body);
+}
+
+.features {
+    list-style: none;
+    margin: 30px 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.pricing-card.destaque {
+    border: 2px solid var(--primary-color);
+    position: relative;
+    transform: scale(1.05); /* Deixa o card do meio um pouco maior */
+}
+
+.pricing-card.destaque:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- 7. FORMULÁRIO (LEADS) --- */
+.form-container {
+    max-width: 600px;
+    text-align: center;
+}
+/* --- NOTA PARA NÚMEROS INTERNACIONAIS --- */
+.nota-internacional {
+    font-size: 0.85rem; /* Deixa a letra perceptivelmente menor */
+    color: #cccccc; /* Um cinza bem claro, super legível no fundo escuro */
+    margin-top: 15px; /* Puxa a frase um pouco para perto do texto de cima */
+    margin-bottom: 25px; /* Dá um espaço antes de começar os campos de digitar */
+}
+.lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.lead-form input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: var(--bg-card);
+    color: var(--text-title);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.lead-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+/* --- FUNDO COM FOTO NA SEÇÃO DE CONTATO --- */
+.contato {
+    /* O linear-gradient cria uma película escura transparente sobre a foto */
+    background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('../img/desejada.png');
+    background-size: cover;
+    background-position: 50% 10%;
+    background-attachment: fixed; /* Esse é o truque que dá o efeito de movimento! */
+    padding: 120px 20px; /* Dá um respiro maior para a foto aparecer bem */
+    border-top: 2px solid var(--primary-color); /* Uma linha dourada fina pra separar do bloco de cima */
+}
+
+/* --- 8. WHATSAPP FLUTUANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Cor oficial do WPP */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float img {
+    width: 45px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* --- EFEITO DE MOVIMENTO AO ROLAR (FADE-IN) --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px abaixo */
+    transition: all 0.8s ease-out; /* Duração de 0.8s para um efeito suave */
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta para a posição original */
+}
+
+/* --- RESPONSIVIDADE (CELULARES) --- */
+@media (max-width: 768px) {
+    .hero-content, .metodo-content, .cards-grid {
+        flex-direction: column;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pricing-card.destaque {
+        transform: scale(1); /* Tira o aumento do card no celular para não quebrar a tela */
+    }
+    
+    .pricing-card.destaque:hover {
+        transform: translateY(-5px);
+    }
+}
