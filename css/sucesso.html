@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Confirmado | Paulo Personal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .sucesso-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #111; /* Fundo padrão do seu site */
+            color: #fff;
+        }
+        .icon-check {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        .instrucoes-box {
+            background: #1a1a1a;
+            border-left: 4px solid #d4af37; /* Dourado da identidade visual */
+            padding: 25px;
+            margin: 30px 0;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 8px;
+        }
+        .instrucoes-box h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .instrucoes-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .instrucoes-box li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+        }
+        .instrucoes-box li span {
+            font-size: 1.5rem;
+            margin-right: 12px;
+        }
+        .btn-wpp {
+            background-color: #25D366; /* Verde do WhatsApp para chamar atenção */
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+        .btn-wpp:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="sucesso-container">
+        <div class="icon-check">✅</div>
+        <h1>PAGAMENTO APROVADO!</h1>
+        <p>Seja muito bem-vindo(a) ao time Paulo Personal. Sua transformação começa agora.</p>
+
+        <div class="instrucoes-box">
+            <h3>⚠️ IMPORTANTE: Sobre sua Avaliação Física</h3>
+            <p>Para montarmos seu treino com perfeição, usaremos uma Inteligência Artificial para analisar sua composição corporal. Para o sistema funcionar, você precisará tirar fotos seguindo estas <strong>3 regras</strong>:</p>
+            <ul>
+                <li><span>☀️</span> <strong>Iluminação:</strong> Fique de frente para uma janela ou em um ambiente muito claro. Evite sombras que escondam o formato do corpo.</li>
+                <li><span>🟦</span> <strong>Fundo Neutro:</strong> Fique de pé em frente a uma parede lisa e clara. Sem móveis, portas ou objetos atrás de você.</li>
+                <li><span>🩳</span> <strong>Roupas Curtas:</strong> A IA precisa "ler" você. Homens (apenas bermuda ou sunga). Mulheres (top e short curto). Prenda o cabelo, se for comprido.</li>
+            </ul>
+        </div>
+
+        <p style="margin-bottom: 20px; font-weight: 600;">Tudo entendido? Clique no botão abaixo para me chamar no WhatsApp e pegar o link da avaliação!</p>
+
+        <a href="https://wa.me/5521985199932?text=Fala%20Paulo!%20Acabei%20de%20assinar%20a%20consultoria%20e%20estou%20pronto%20para%20fazer%20minha%20avalia%C3%A7%C3%A3o." class="btn-wpp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" height="24">
+            CHAMAR NO WHATSAPP
+        </a>
+    </section>
+
+</body>
+</html>
