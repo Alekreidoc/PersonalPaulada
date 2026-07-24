@@ -11,55 +11,136 @@
 
     <header class="header">
         <div class="container header-content">
-            <div class="logo">PAULO PERSONAL</div>
-            <a href="#planos" class="btn-primary">Garantir minha vaga</a>
+            <div class="logo">PAULO COACH</div>
+            <a href="#planos" class="btn-primary">IR PARA OS PLANOS!</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text hidden">
-                <h1>Construa o corpo que você sempre quis adequado a sua rotina.</h1>
-                <p>Esqueça os treinos genéricos. A minha consultoria online,<strong> focada em estética corporal</strong>, você encontra o equilíbrio entre intensidade (carga), volume (repetições e séries), com técnicas adequadas ao seu nível de treinamento atual.</p>
+                <h1>A sua oportunidade de mudar seu físico e atingir o seu objetivo está aqui e agora</h1>
+                <p>Educador físico e Nutricionista trabalhando em harmonia para você atingir o seu objetivo. Dieta perfeitamente adaptado ao seu treino e vice-versa.</p>
                 <a href="#planos" class="btn-primary btn-large">Quero Começar Minha Transformação</a>
             </div>
             <div class="hero-image hidden">
-                <img src="img/bracocruzado.png" alt="Paulo Personal Trainer">
+                <img src="img/braçospar trás.jpeg" alt="Paulo Personal Trainer">
+            </div>
+        </div>
+    </section>
+    <!-- NOVA SEÇÃO: JAMILA (NUTRIÇÃO) -->
+    <section class="nutri-section" id="nutricao">
+        <div class="container nutri-content hidden">
+            <div class="nutri-text">
+                <h2>O Combustível Perfeito: Nutrição Inteligente</h2>
+                <p>Não adianta dar o máximo no treino se a sua alimentação joga contra você. É por isso que a consultoria conta com a expertise da <strong>nutricionista e terapeuta ortomolecular Jamila</strong>.</p>
+                <p>Trabalhando em conjunto com o meu protocolo de treinos, ela desenvolverá um plano alimentar estratégico, focado em acelerar a sua queima de gordura e construção muscular, sem dietas restritivas e impossíveis de seguir.</p>
+            </div>
+            <div class="nutri-image hidden">
+                <!-- Substitua 'jamila.jpg' pelo nome real do arquivo da foto dela -->
+                <img src="img/fotojamilasite.jpeg" alt="Nutricionista Jamila">
+            </div>
+        </div>
+    </section>
+ <!-- NOVA SEÇÃO: RESULTADOS (CARROSSEL AUTOMÁTICO) -->
+    <section class="resultados-section" id="resultados">
+        <div class="container">
+            <div class="resultados-header">
+                <h2>Resultados Reais</h2>
+                <p>A combinação perfeita entre o Método DN e a nutrição inteligente.</p>
+            </div>
+        </div>
+        
+        <!-- Pista do carrossel (Ocupa a largura toda) -->
+        <div class="carrossel-container">
+            <div class="carrossel-track">
+                
+                <!-- GRUPO 1 DE CARDS -->
+                <div class="slide-group">
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/Fernanda.jpeg" alt="Antes e depois do aluno 1">
+                        </div>
+                        <p>Aluno 1 - 12 semanas</p>
+                    </div>
+
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/CostasAlek.jpeg" alt="Antes e depois do aluno 2">
+                        </div>
+                        <p>Aluno 2 - 8 semanas</p>
+                    </div>
+
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/FrenteAlek.jpeg" alt="Antes e depois do aluno 3">
+                        </div>
+                        <p>Aluno 3 - 16 semanas</p>
+                    </div>
+                </div>
+
+                <!-- GRUPO 2 DE CARDS (Cópia exata para o loop não quebrar) -->
+                <div class="slide-group">
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/ClientePaulo.jpeg" alt="Antes e depois do aluno 1">
+                        </div>
+                        <p>Aluno 1 - 12 semanas</p>
+                    </div>
+
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/Fernanda.jpeg" alt="Antes e depois do aluno 2">
+                        </div>
+                        <p>Aluno 2 - 8 semanas</p>
+                    </div>
+
+                    <div class="resultado-card">
+                        <div class="resultado-img-wrapper">
+                            <img src="img/FrenteAlek.jpeg" alt="Antes e depois do aluno 3">
+                        </div>
+                        <p>Aluno 3 - 16 semanas</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
-    <section class="metodo bg-darker" id="metodo">
-        <div class="container metodo-content hidden">
-            <div class="metodo-image">
-                <img src="img/anatomico.jpg" alt="Metodologia DN">
+<!-- SEÇÃO: DIFERENCIAIS -->
+    <section class="diferenciais container" id="diferenciais">
+        <h2>Por que essa consultoria é diferente?</h2>
+        
+        <!-- Esse wrapper segura tudo e posiciona as setas -->
+        <div class="diferenciais-wrapper">
+            
+            <!-- Seta Esquerda -->
+            <button class="seta-carrossel seta-esquerda" id="setaEsq">&#10094;</button>
+            
+            <!-- A trilha onde os cards vão deslizar -->
+            <div class="diferenciais-pista" id="pistaDiferenciais">
+                <div class="diferencial-card">
+                    <img src="img/1.jpeg" alt="Treino Personalizado">
+                </div>
+                <div class="diferencial-card">
+                    <img src="img/ab.jpeg" alt="Nutrição Integrada">
+                </div>
+                <div class="diferencial-card">
+                    <img src="img/abc.jpeg" alt="Acompanhamento">
+                </div>
+                
+                <div class="diferencial-card">
+                    <img src="img/4.JPEG" alt="Acompanhamento">
+                </div>
+                
+                <div class="diferencial-card">
+                    <img src="img/5.jpeg" alt="Acompanhamento">
+                </div>
             </div>
-            <div class="metodo-text">
-                <h2>O Fim do "3 de 10": Conheça o Método DN.</h2>
-                <p>Chega de planilhas de gaveta copiadas e coladas. O <strong>Método DN (Dynamic + Nexus)</strong> é a inteligência por trás dos seus resultados. Nós combinamos o melhor do treinamento de força com estímulos metabólicos precisos.</p>
-                <p>Eu mesmo prescrevo cada etapa do seu plano. O objetivo? Melhora da composição corporal, diminuindo seu percentual de gordura e aumentando sua massa magra.</p>
-            </div>
-        </div>
-    </section>
+            
+            <!-- Seta Direita -->
+            <button class="seta-carrossel seta-direita" id="setaDir">&#10095;</button>
 
-    <section class="diferenciais container">
-        <h2 class="section-title hidden">Por que essa consultoria é diferente?</h2>
-        <div class="cards-grid">
-            <div class="card hidden">
-                <img src="img/vaodor.jpg" alt="Personalizado">
-                <h3>100% Personalizado</h3>
-                <p>Seu treino é montado do zero, <strong>respeitando suas limitações</strong>, seu tempo disponível e seu objetivo estético.</p>
-            </div>
-            <div class="card hidden">
-                <img src="img/peitoral.jpg" class="foto-ampla" style="object-position: 50% 11%;" alt="Correção">
-                <h3>Correção de Execução (dentro de 24h)</h3>
-                <p>Grave sua execução pelo celular. Eu mesmo analiso, corrijo sua postura e ajusto o movimento para <strong>extrair o máximo do exercício</strong> com segurança.</p>
-            </div>
-            <div class="card hidden">
-                <img src="img/pauloajudando.jpeg" style="object-position: 50% 30%;" alt="Resultados">
-                <h3>Acompanhamento Lado a Lado</h3>
-                <p>O acompanhamento não é terceirizado. Acompanharei sua evolução e irei ajustar a rota para garantir <strong>resultados estéticos reais.</strong></p>
-            </div>
         </div>
     </section>
 
@@ -78,7 +159,7 @@
             <div class="card pricing-card hidden">
                 <h3>Mensal</h3>
                 <div class="price">R$ 197<span>/mês</span></div>
-                <p style="font-size: 0.85rem; margin-top: -10px; opacity: 0.8;">à vista ou parc. com juros do cartão</p>
+                <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
                 <p>Ideal para conhecer a metodologia DN e dar o primeiro passo.</p>
                 <ul class="features">
                     <li>Treino 100% Personalizado</li>
@@ -92,7 +173,7 @@
                 <div class="badge">Recomendado</div>
                 <h3>Trimestral</h3>
                 <div class="price">R$ 465</div>
-                <p style="font-size: 0.85rem; margin-top: -10px; opacity: 0.8;">Equivalente a <strong>R$ 155/mês</strong><br>à vista ou parc. com juros do cartão</p>
+                <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
                 <p>O tempo perfeito para a mágica da recomposição corporal acontecer.</p>
                 <ul class="features">
                     <li>Tudo do plano Mensal</li>
@@ -105,7 +186,7 @@
             <div class="card pricing-card hidden">
                 <h3>Semestral</h3>
                 <div class="price">R$ 774</div>
-                <p style="font-size: 0.85rem; margin-top: -10px; opacity: 0.8;">Equivalente a <strong>R$ 129/mês</strong><br>à vista ou parc. com juros do cartão</p>
+                <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
                 <p>Para quem decidiu mudar de corpo e de vida definitivamente.</p>
                 <ul class="features">
                     <li>Tudo do plano Trimestral</li>
@@ -133,7 +214,7 @@
                 <button type="submit" class="btn-primary btn-full" id="btnEnviar">Quero falar com a equipe</button>
             </form>
 
-            <div id="mensagemSucesso" style="display: none; color: var(--primary-color); font-weight: 800; margin-top: 20px; font-size: 1.2rem;">
+            <div id="mensagemSucesso" class="msg-sucesso">
                 ✅ Dados enviados com sucesso! <br>A equipe de suporte do Paulo entrará em contato com você no WhatsApp em breve.
             </div>
 
@@ -193,6 +274,23 @@
             }, 1500);
         }); 
 
+    </script>
+    <!-- SCRIPT DO CARROSSEL DE DIFERENCIAIS -->
+    <script>
+        const pista = document.getElementById('pistaDiferenciais');
+        const setaEsq = document.getElementById('setaEsq');
+        const setaDir = document.getElementById('setaDir');
+
+        // Calcula a largura de um card + o espaço (gap) para saber o quanto pular
+        const scrollAmount = 340; 
+
+        setaDir.addEventListener('click', () => {
+            pista.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        setaEsq.addEventListener('click', () => {
+            pista.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
