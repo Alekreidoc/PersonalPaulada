@@ -680,3 +680,35 @@ h1, h2, h3 {
     background-color: #000000 !important;
     color: var(--primary-color) !important;
 }
+/* --- CORREÇÃO DO CABEÇALHO NO CELULAR --- */
+
+/* Trava de segurança: impede que qualquer elemento alargue a página no celular */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+@media (max-width: 768px) {
+    /* Ajusta o espaçamento interno do cabeçalho */
+    header .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 10px; /* Reduz o espaço entre o logo e o botão */
+    }
+
+    /* Diminui o texto "PAULO COACH" no celular */
+    header .logo, 
+    header h1,
+    header h2 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Diminui o botão "IR PARA OS PLANOS" para caber na tela */
+    header .btn-primary, 
+    header .btn-outline,
+    header a {
+        font-size: 0.7rem !important;
+        padding: 8px 10px !important;
+        white-space: nowrap; /* Impede que o texto do botão quebre em duas linhas */
+    }
+}
