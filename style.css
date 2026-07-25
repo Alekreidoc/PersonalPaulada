@@ -130,6 +130,13 @@ h1, h2, h3 {
 /* --- 2. HERO SECTION --- */
 /* --- 2. HERO SECTION --- */
 /* --- 2. HERO SECTION --- */
+/* Garantindo que a foto do Paulo fique responsiva e centralizada em qualquer tela */
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 .hero {
     padding-top: 75px; /* Altura exata para o menu preto não cobrir o topo da foto */
     display: flex;
