@@ -1,14 +1,14 @@
-/* --- VARIÁVEIS DE COR (PALETA 1: DARK & GOLD) --- */
-/* --- VARIÁVEIS DE COR (NOVA PALETA) --- */
+/* --- VARIÁVEIS DE COR --- */
 :root {
-    --bg-main: #000000;         /* Black */
-    --bg-darker: #0a0a0a;       /* Prussian Blue */
-    --bg-card: #1E1E1E;         /* Usando o azul para os cards também */
-    --text-title: #FFFFFF;      /* White */
-    --text-body: #E5E5E5;       /* Alabaster Grey para leitura suave no fundo escuro */
-    --primary-color: #FCA311;   /* Orange */
-    --primary-hover: #e08b0b;   /* Um tom de laranja levemente mais escuro para o hover */
+    --bg-main: #000000;         
+    --bg-darker: #0a0a0a;       
+    --bg-card: #1E1E1E;         
+    --text-title: #FFFFFF;      
+    --text-body: #E5E5E5;       
+    --primary-color: #FCA311;   
+    --primary-hover: #e08b0b;   
 }
+
 /* --- RESET BÁSICO --- */
 * {
     margin: 0;
@@ -17,7 +17,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Faz a rolagem do menu ser suave */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -54,7 +54,7 @@ h1, h2, h3 {
 .btn-primary {
     display: inline-block;
     background-color: var(--primary-color);
-    color: #000; /* Texto preto contrasta melhor no botão dourado */
+    color: #000;
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
@@ -67,7 +67,7 @@ h1, h2, h3 {
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-2px); /* Efeito de levantar no hover */
+    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -121,76 +121,35 @@ h1, h2, h3 {
     font-size: 1.5rem;
     letter-spacing: 2px;
 }
-/* Diminui especificamente o botão que está dentro do header */
+
 .header .btn-primary {
-    padding: 5px 14px; /* Diminui a "gordura" do botão (cima/baixo e lados) */
-    font-size: 0.85rem; /* Diminui o tamanho da letra */
+    padding: 5px 14px;
+    font-size: 0.85rem;
 }
 
 /* --- 2. HERO SECTION --- */
+/* --- 2. HERO SECTION --- */
+/* --- 2. HERO SECTION --- */
 .hero {
-    padding-top: 70px; /* Compensa o header fixo */
-    min-height: 100vh;
+    padding-top: 75px; /* Altura exata para o menu preto não cobrir o topo da foto */
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+/* Zerando o espaçamento padrão do container apenas nesta seção para a foto subir */
+.hero .container {
+    padding-top: 0; 
+    padding-bottom: 20px;
 }
 
-.hero-text {
-    flex: 1;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
-.hero-image {
-    flex: 1;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-/* --- 3. MÉTODO --- */
-.metodo-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.metodo-image {
-    flex: 1;
-}
-
-.metodo-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.metodo-text {
-    flex: 1;
-}
-/* --- 3.5 SEÇÃO DA NUTRICIONISTA (Cores Claras) --- */
+/* --- 3. SEÇÃO DA NUTRICIONISTA --- */
 .nutri-section {
-    background-color: #E5E5E5; /* Alabaster Grey do fundo */
-    color: #14213D; /* Texto em Prussian Blue para alto contraste */
+    background-color: #E5E5E5; 
+    color: #14213D; 
 }
 
 .nutri-section h2 {
-    color: #000000; /* Título em preto absoluto */
+    color: #000000; 
 }
 
 .nutri-content {
@@ -206,7 +165,7 @@ h1, h2, h3 {
 .nutri-text p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    font-weight: 600; /* Deixando o texto um pouco mais forte no fundo claro */
+    font-weight: 600; 
 }
 
 .nutri-image {
@@ -219,12 +178,13 @@ h1, h2, h3 {
     border: 3px solid var(--primary-color);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
-/* --- 3.6 SEÇÃO DE RESULTADOS (CARROSSEL AUTOMÁTICO) --- */
+
+/* --- 4. SEÇÃO DE RESULTADOS (CARROSSEL MANUAL) --- */
 .resultados-section {
     background-color: var(--bg-main);
-    padding: 80px 0; /* Tiramos o padding lateral para o carrossel encostar nas bordas da tela */
+    padding: 80px 0; 
     text-align: center;
-    overflow: hidden; /* Impede que crie barra de rolagem horizontal na página */
+    overflow: hidden; 
 }
 
 .resultados-header {
@@ -243,28 +203,28 @@ h1, h2, h3 {
     font-size: 1.1rem;
 }
 
-/* Container que esconde o que passa do limite da tela */
-.carrossel-container {
-    width: 100%;
+.resultados-wrapper {
     position: relative;
-}
-
-/* A trilha que desliza para a esquerda */
-.carrossel-track {
     display: flex;
-    width: max-content;
-    animation: rolarCarrossel 20s linear infinite; /* 20s é a velocidade. Aumente para ficar mais lento */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Pausa a animação se o usuário colocar o mouse em cima de uma foto */
-.carrossel-track:hover {
-    animation-play-state: paused;
-}
-
-.slide-group {
+.resultados-pista {
     display: flex;
     gap: 30px;
-    padding-right: 30px; /* Mantém o mesmo espaço entre o grupo 1 e o grupo 2 */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    padding: 20px 0;
+    width: 100%;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.resultados-pista::-webkit-scrollbar {
+    display: none; 
 }
 
 .resultado-card {
@@ -273,23 +233,9 @@ h1, h2, h3 {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 300px; /* Fixamos a largura para os cards não esmagarem */
-    flex-shrink: 0; /* Impede os cards de encolherem no flexbox */
-}
-
-.resultado-img-wrapper {
-    width: 100%;
-    height: 300px; /* Altura fixa para manter todas as fotos alinhadas */
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    border: 2px solid var(--primary-color);
-}
-
-.resultado-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Corta a foto perfeitamente sem distorcer */
+    width: 320px; 
+    flex: 0 0 320px; 
+    scroll-snap-align: center; 
 }
 
 .resultado-card p {
@@ -297,57 +243,12 @@ h1, h2, h3 {
     font-weight: 600;
     font-size: 1.1rem;
     margin: 0;
-}
-
-/* O motor da animação */
-@keyframes rolarCarrossel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Move exatamente até a metade da trilha (fim do Grupo 1) e recomeça invisível */
-    }
-}
-
-.resultados-header {
-    margin-bottom: 50px;
-}
-
-.resultados-header h2 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.resultados-header p {
-    color: var(--text-body);
-    font-size: 1.1rem;
-}
-
-/* O grid automático elimina a necessidade de criar regras complexas para o celular */
-.resultados-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.resultado-card {
-    background-color: var(--bg-card); /* Fundo azul Prussian Blue */
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.resultado-card:hover {
-    transform: translateY(-5px);
+    margin-top: 10px;
 }
 
 .resultado-img-wrapper {
     width: 100%;
+    height: 350px; 
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -356,22 +257,23 @@ h1, h2, h3 {
 
 .resultado-img-wrapper img {
     width: 100%;
-    height: auto;
-    display: block; /* Remove o espaço em branco abaixo da imagem */
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
     transition: transform 0.4s ease;
 }
 
 .resultado-img-wrapper:hover img {
-    transform: scale(1.05); /* Pequeno zoom na foto ao passar o mouse */
+    transform: scale(1.05); 
 }
 
-.resultado-card p {
-    color: var(--text-title);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin: 0;
+/* --- 5. SEÇÃO DE DIFERENCIAIS (CARROSSEL) --- */
+.diferenciais h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
-/* --- SEÇÃO DE DIFERENCIAIS (CARROSSEL INTERATIVO) --- */
+
 .diferenciais-wrapper {
     position: relative;
     display: flex;
@@ -383,12 +285,10 @@ h1, h2, h3 {
 .diferenciais-pista {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* Permite rolar para os lados */
+    overflow-x: auto; 
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory; /* Faz o card "travar" direitinho no centro ao arrastar */
+    scroll-snap-type: x mandatory; 
     padding: 20px 0;
-    
-    /* Esconde a barra de rolagem feia nativa */
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 }
@@ -398,13 +298,23 @@ h1, h2, h3 {
 }
 
 .diferencial-card {
-    width: 340px; /* Trava a largura exata do card */
-    flex: 0 0 340px; /* Impede que o card estique com o tamanho original da foto */
+    width: 340px; 
+    flex: 0 0 340px; 
     scroll-snap-align: center;
     background-color: transparent; 
     padding: 0; 
 }
-/* Estilo das Setas */
+
+.diferencial-card img {
+    width: 100%;
+    height: auto; 
+    border-radius: 12px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: block;
+}
+
+/* --- ESTILOS DAS SETAS (COMUM PARA OS 2 CARROSSEIS) --- */
 .seta-carrossel {
     background-color: var(--primary-color);
     color: #000;
@@ -428,39 +338,10 @@ h1, h2, h3 {
     background-color: var(--primary-hover);
 }
 
-/* Posição das Setas */
 .seta-esquerda { left: -20px; }
 .seta-direita { right: -20px; }
 
-/* No celular, é melhor esconder as setas e deixar a pessoa só arrastar com o dedo */
-@media (max-width: 768px) {
-    .seta-esquerda, .seta-direita {
-        /* Removemos o display: none e apenas deixamos as setas um pouco menores para o celular */
-        width: 35px;
-        height: 35px;
-        font-size: 1.1rem;
-    }
-    .seta-esquerda { left: -10px; } /* Ajusta a posição para telas menores */
-    .seta-direita { right: -10px; }
-    
-    .diferencial-card {
-        min-width: 280px; 
-    }
-}
-/* Nova regra para fotos que precisam de mais espaço vertical */
-.card img.foto-ampla {
-    height: 350px; /* Aumentamos de 250px para 350px */
-}
-/* Ajuste para as imagens que já têm o texto embutido na arte */
-.diferencial-card img {
-    width: 100%;
-    height: auto; /* Fundamental para não cortar o texto da sua arte */
-    border-radius: 12px;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    display: block;
-}
-/* --- 5. RELACIONAMENTO --- */
+/* --- 6. RELACIONAMENTO --- */
 .relacionamento-content {
     text-align: center;
     max-width: 800px;
@@ -471,10 +352,23 @@ h1, h2, h3 {
     margin-bottom: 40px;
 }
 
-/* --- 6. PLANOS --- */
+/* --- 7. PLANOS --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .pricing-card {
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .pricing-card h3 {
@@ -491,6 +385,12 @@ h1, h2, h3 {
 .pricing-card .price span {
     font-size: 1rem;
     color: var(--text-body);
+}
+
+.price-subtitle {
+    font-size: 0.85rem;
+    margin-top: -10px;
+    opacity: 0.8;
 }
 
 .features {
@@ -517,7 +417,7 @@ h1, h2, h3 {
 .pricing-card.destaque {
     border: 2px solid var(--primary-color);
     position: relative;
-    transform: scale(1.05); /* Deixa o card do meio um pouco maior */
+    transform: scale(1.05); 
 }
 
 .pricing-card.destaque:hover {
@@ -537,18 +437,28 @@ h1, h2, h3 {
     font-size: 0.9rem;
 }
 
-/* --- 7. FORMULÁRIO (LEADS) --- */
+/* --- 8. FORMULÁRIO E CONTATO --- */
+.contato {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('../img/desejada.png');
+    background-size: cover;
+    background-position: 50% 10%;
+    background-attachment: fixed; 
+    padding: 120px 20px; 
+    border-top: 2px solid var(--primary-color); 
+}
+
 .form-container {
     max-width: 600px;
     text-align: center;
 }
-/* --- NOTA PARA NÚMEROS INTERNACIONAIS --- */
+
 .nota-internacional {
-    font-size: 0.85rem; /* Deixa a letra perceptivelmente menor */
-    color: #cccccc; /* Um cinza bem claro, super legível no fundo escuro */
-    margin-top: 15px; /* Puxa a frase um pouco para perto do texto de cima */
-    margin-bottom: 25px; /* Dá um espaço antes de começar os campos de digitar */
+    font-size: 0.85rem; 
+    color: #cccccc; 
+    margin-top: 15px; 
+    margin-bottom: 25px; 
 }
+
 .lead-form {
     display: flex;
     flex-direction: column;
@@ -571,23 +481,21 @@ h1, h2, h3 {
     outline: none;
     border-color: var(--primary-color);
 }
-/* --- FUNDO COM FOTO NA SEÇÃO DE CONTATO --- */
-.contato {
-    /* O linear-gradient cria uma película escura transparente sobre a foto */
-    background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('../img/desejada.png');
-    background-size: cover;
-    background-position: 50% 10%;
-    background-attachment: fixed; /* Esse é o truque que dá o efeito de movimento! */
-    padding: 120px 20px; /* Dá um respiro maior para a foto aparecer bem */
-    border-top: 2px solid var(--primary-color); /* Uma linha dourada fina pra separar do bloco de cima */
+
+.msg-sucesso {
+    display: none; 
+    color: var(--primary-color); 
+    font-weight: 800; 
+    margin-top: 20px; 
+    font-size: 1.2rem;
 }
 
-/* --- 8. WHATSAPP FLUTUANTE --- */
+/* --- 9. WHATSAPP FLUTUANTE --- */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366; /* Cor oficial do WPP */
+    background-color: #25d366; 
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -610,60 +518,16 @@ h1, h2, h3 {
 /* --- EFEITO DE MOVIMENTO AO ROLAR (FADE-IN) --- */
 .hidden {
     opacity: 0;
-    transform: translateY(30px); /* Começa 30px abaixo */
-    transition: all 0.8s ease-out; /* Duração de 0.8s para um efeito suave */
+    transform: translateY(30px); 
+    transition: all 0.8s ease-out; 
 }
 
 .show {
     opacity: 1;
-    transform: translateY(0); /* Volta para a posição original */
+    transform: translateY(0); 
 }
 
-/* --- RESPONSIVIDADE (CELULARES) --- */
-@media (max-width: 768px) {
-    .hero-content, .metodo-content, .nutri-content, .cards-grid {
-        flex-direction: column;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    
-    .pricing-card.destaque {
-        transform: scale(1); /* Tira o aumento do card no celular para não quebrar a tela */
-    }
-    
-    .pricing-card.destaque:hover {
-        transform: translateY(-5px);
-    }
-} /* <-- ESTA É A CHAVE QUE FECHA O @MEDIA CORRETAMENTE */
-
-/* --- CLASSES AUXILIARES (Refatoração de estilos in-line) --- */
-
-/* Ajuste de posição das fotos nos cards de diferenciais */
-.foto-correcao {
-    object-position: 50% 11%;
-}
-.foto-resultados {
-    object-position: 50% 30%;
-}
-
-/* Subtítulo de parcelamento nos cards de preço */
-.price-subtitle {
-    font-size: 0.85rem;
-    margin-top: -10px;
-    opacity: 0.8;
-}
-
-/* Mensagem de sucesso do formulário de contato */
-.msg-sucesso {
-    display: none; 
-    color: var(--primary-color); 
-    font-weight: 800; 
-    margin-top: 20px; 
-    font-size: 1.2rem;
-}
-/* --- PÁGINA DE SUCESSO --- */
+/* --- PÁGINA DE SUCESSO (sucesso.html) --- */
 .sucesso-container {
     min-height: 100vh;
     display: flex;
@@ -681,7 +545,7 @@ h1, h2, h3 {
 }
 .instrucoes-box {
     background: #1a1a1a;
-    border-left: 4px solid var(--primary-color); /* Já linkado com a cor oficial */
+    border-left: 4px solid var(--primary-color); 
     padding: 25px;
     margin: 30px 0;
     max-width: 600px;
@@ -727,4 +591,85 @@ h1, h2, h3 {
 }
 .sucesso-container h1 {
     color: var(--primary-color);
+}
+
+/* --- RESPONSIVIDADE (CELULARES) --- */
+@media (max-width: 768px) {
+    .hero-content, .nutri-content, .cards-grid {
+        flex-direction: column;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pricing-card.destaque {
+        transform: scale(1); 
+    }
+    
+    .pricing-card.destaque:hover {
+        transform: translateY(-5px);
+    }
+
+    .seta-esquerda, .seta-direita {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+    .seta-esquerda { left: -10px; } 
+    .seta-direita { right: -10px; }
+    
+    .diferencial-card {
+        min-width: 280px; 
+    }
+}
+/* --- CARTÕES INVERTIDOS (TRIMESTRAL E SEMESTRAL) --- */
+.card.pricing-card-inverted {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Onde era laranja vira preto */
+.card.pricing-card-inverted h3 {
+    color: #000000 !important; 
+}
+
+/* Onde era branco continua branco */
+.card.pricing-card-inverted .price,
+.card.pricing-card-inverted .price span,
+.card.pricing-card-inverted .price-subtitle,
+.card.pricing-card-inverted p,
+.card.pricing-card-inverted .features li {
+    color: #ffffff !important; 
+}
+
+/* O checkzinho (✓) vira preto */
+.card.pricing-card-inverted .features li::before {
+    color: #000000 !important; 
+}
+
+/* Ajuste da etiqueta "Recomendado" para o fundo laranja */
+.card.pricing-card-inverted .badge {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
+}
+
+/* Ajuste dos botões dentro do cartão laranja */
+.card.pricing-card-inverted .btn-primary {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
+}
+
+.card.pricing-card-inverted .btn-primary:hover {
+    background-color: #222222 !important;
+}
+
+.card.pricing-card-inverted .btn-outline {
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+.card.pricing-card-inverted .btn-outline:hover {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
 }

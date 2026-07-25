@@ -17,18 +17,14 @@
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text hidden">
-                <h1>A sua oportunidade de mudar seu físico e atingir o seu objetivo está aqui e agora</h1>
-                <p>Educador físico e Nutricionista trabalhando em harmonia para você atingir o seu objetivo. Dieta perfeitamente adaptado ao seu treino e vice-versa.</p>
-                <a href="#planos" class="btn-primary btn-large">Quero Começar Minha Transformação</a>
-            </div>
-            <div class="hero-image hidden">
+        <div class="container hero-content" style="justify-content: center;">
+            <div class="hero-image hidden" style="max-width: 1000px; width: 150%;">
                 <img src="img/braçospar trás.jpeg" alt="Paulo Personal Trainer">
             </div>
         </div>
     </section>
-    <!-- NOVA SEÇÃO: JAMILA (NUTRIÇÃO) -->
+
+    <!-- SEÇÃO: JAMILA (NUTRIÇÃO) -->
     <section class="nutri-section" id="nutricao">
         <div class="container nutri-content hidden">
             <div class="nutri-text">
@@ -37,12 +33,12 @@
                 <p>Trabalhando em conjunto com o meu protocolo de treinos, ela desenvolverá um plano alimentar estratégico, focado em acelerar a sua queima de gordura e construção muscular, sem dietas restritivas e impossíveis de seguir.</p>
             </div>
             <div class="nutri-image hidden">
-                <!-- Substitua 'jamila.jpg' pelo nome real do arquivo da foto dela -->
                 <img src="img/fotojamilasite.jpeg" alt="Nutricionista Jamila">
             </div>
         </div>
     </section>
- <!-- NOVA SEÇÃO: RESULTADOS (CARROSSEL AUTOMÁTICO) -->
+
+    <!-- SEÇÃO: RESULTADOS (CARROSSEL MANUAL) -->
     <section class="resultados-section" id="resultados">
         <div class="container">
             <div class="resultados-header">
@@ -51,73 +47,45 @@
             </div>
         </div>
         
-        <!-- Pista do carrossel (Ocupa a largura toda) -->
-        <div class="carrossel-container">
-            <div class="carrossel-track">
-                
-                <!-- GRUPO 1 DE CARDS -->
-                <div class="slide-group">
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/Fernanda.jpeg" alt="Antes e depois do aluno 1">
-                        </div>
-                        <p>Aluno 1 - 12 semanas</p>
+        <div class="resultados-wrapper">
+            <!-- Seta Esquerda -->
+            <button class="seta-carrossel seta-esquerda" id="setaEsqResultados">&#10094;</button>
+            
+            <div class="resultados-pista" id="pistaResultados">
+                <div class="resultado-card">
+                    <div class="resultado-img-wrapper">
+                        <img src="img/Fernanda.jpeg" alt="Antes e depois do aluno 1">
                     </div>
-
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/CostasAlek.jpeg" alt="Antes e depois do aluno 2">
-                        </div>
-                        <p>Aluno 2 - 8 semanas</p>
-                    </div>
-
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/FrenteAlek.jpeg" alt="Antes e depois do aluno 3">
-                        </div>
-                        <p>Aluno 3 - 16 semanas</p>
-                    </div>
+                    <p>Aluno 1 - 12 semanas</p>
                 </div>
 
-                <!-- GRUPO 2 DE CARDS (Cópia exata para o loop não quebrar) -->
-                <div class="slide-group">
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/ClientePaulo.jpeg" alt="Antes e depois do aluno 1">
-                        </div>
-                        <p>Aluno 1 - 12 semanas</p>
+                <div class="resultado-card">
+                    <div class="resultado-img-wrapper">
+                        <img src="img/CostasAlek.jpeg" alt="Antes e depois do aluno 2">
                     </div>
-
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/Fernanda.jpeg" alt="Antes e depois do aluno 2">
-                        </div>
-                        <p>Aluno 2 - 8 semanas</p>
-                    </div>
-
-                    <div class="resultado-card">
-                        <div class="resultado-img-wrapper">
-                            <img src="img/FrenteAlek.jpeg" alt="Antes e depois do aluno 3">
-                        </div>
-                        <p>Aluno 3 - 16 semanas</p>
-                    </div>
+                    <p>Aluno 2 - 8 semanas</p>
                 </div>
-                
+
+                <div class="resultado-card">
+                    <div class="resultado-img-wrapper">
+                        <img src="img/FrenteAlek.jpeg" alt="Antes e depois do aluno 3">
+                    </div>
+                    <p>Aluno 3 - 16 semanas</p>
+                </div>
             </div>
+            
+            <!-- Seta Direita -->
+            <button class="seta-carrossel seta-direita" id="setaDirResultados">&#10095;</button>
         </div>
     </section>
 
-<!-- SEÇÃO: DIFERENCIAIS -->
+    <!-- SEÇÃO: DIFERENCIAIS -->
     <section class="diferenciais container" id="diferenciais">
         <h2>Por que essa consultoria é diferente?</h2>
         
-        <!-- Esse wrapper segura tudo e posiciona as setas -->
         <div class="diferenciais-wrapper">
-            
-            <!-- Seta Esquerda -->
             <button class="seta-carrossel seta-esquerda" id="setaEsq">&#10094;</button>
             
-            <!-- A trilha onde os cards vão deslizar -->
             <div class="diferenciais-pista" id="pistaDiferenciais">
                 <div class="diferencial-card">
                     <img src="img/1.jpeg" alt="Treino Personalizado">
@@ -128,19 +96,15 @@
                 <div class="diferencial-card">
                     <img src="img/abc.jpeg" alt="Acompanhamento">
                 </div>
-                
                 <div class="diferencial-card">
                     <img src="img/4.JPEG" alt="Acompanhamento">
                 </div>
-                
                 <div class="diferencial-card">
                     <img src="img/5.jpeg" alt="Acompanhamento">
                 </div>
             </div>
             
-            <!-- Seta Direita -->
             <button class="seta-carrossel seta-direita" id="setaDir">&#10095;</button>
-
         </div>
     </section>
 
@@ -156,50 +120,56 @@
         <h2 class="section-title hidden">Escolha seu plano de transformação</h2>
         <div class="cards-grid">
             
+            <!-- PLANO MENSAL (NORMAL) -->
             <div class="card pricing-card hidden">
-                <h3>Mensal</h3>
-                <div class="price">R$ 197<span>/mês</span></div>
+                <h3>Mensal (apenas treino e acompanhamento)</h3>
+                <div class="price">R$ 150<span>/mês</span></div>
                 <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
                 <p>Ideal para conhecer a metodologia DN e dar o primeiro passo.</p>
                 <ul class="features">
-                    <li>Treino 100% Personalizado</li>
+                    <li>Treino 100% Personalizado em 7 dias</li>
                     <li>Suporte Direto (WhatsApp)</li>
-                    <li>Correção de Vídeos</li>
+                    <li>Correção de movimentos e adaptações no treinos</li>
+                    <li>Treino Adaptativo assim que assinar conosco</li>
                 </ul>
                 <a href="https://invoice.infinitepay.io/plans/alek-sandro/l2vJQPuKP" class="btn-outline">Assinar Mensal</a>
             </div>
 
-            <div class="card pricing-card destaque hidden">
-                <div class="badge">Recomendado</div>
-                <h3>Trimestral</h3>
-                <div class="price">R$ 465</div>
-                <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
+            <!-- PLANO TRIMESTRAL (INVERTIDO, SEM DESTAQUE) -->
+            <div class="card pricing-card pricing-card-inverted hidden">
+                <h3>Trimestral (CONSULTORIA COM PERSONAL E NUTRICIONISTA JUNTOS)</h3>
+                <div class="price">R$ 285<span>/mês</span></div>
+                <p class="price-subtitle">à vista POR R$ 885 ou parc. com juros do cartão</p>
                 <p>O tempo perfeito para a mágica da recomposição corporal acontecer.</p>
                 <ul class="features">
-                    <li>Tudo do plano Mensal</li>
-                    <li>Ajustes finos de evolução</li>
-                    <li>Foco em resultados visíveis</li>
+                    <li>Treino e Dieta 100% Personalizado em 7 dias</li>
+                    <li>Suporte Direto (WhatsApp)</li>
+                    <li>Correção de movimentos e adaptações no treinos e dieta</li>
+                    <li>Treino e dieta Adaptativo assim que assinar conosco</li>
+                    <li>Check-up do físico toda semana</li>
+                    <li>EBOOKS GRATUITOS de dieta feitos pela Jamila</li>
                 </ul>
-                <a href="https://invoice.infinitepay.io/plans/alek-sandro/l2vJQPuKP" class="btn-primary">Assinar Trimestral</a>
-            </div>
+<a href="https://invoice.infinitepay.io/plans/alek-sandro/l2vJQPuKP" class="btn-primary">Assinar Trimestral</a>            </div>
 
-            <div class="card pricing-card hidden">
-                <h3>Semestral</h3>
-                <div class="price">R$ 774</div>
-                <p class="price-subtitle">à vista ou parc. com juros do cartão</p>
+            <!-- PLANO SEMESTRAL (INVERTIDO, COM DESTAQUE E RECOMENDADO) -->
+            <div class="card pricing-card pricing-card-inverted destaque hidden">
+                <div class="badge">Recomendado</div>
+                <h3>Semestral (CONSULTORIA COM PERSONAL E NUTRICIONISTA JUNTOS)</h3>
+                <div class="price">R$ 249<span>/mês</span></div>
+                <p class="price-subtitle">à vista POR R$ 1496 ou parc. com juros do cartão</p>
                 <p>Para quem decidiu mudar de corpo e de vida definitivamente.</p>
                 <ul class="features">
                     <li>Tudo do plano Trimestral</li>
                     <li>Acompanhamento de longo prazo</li>
                     <li>Melhor custo-benefício</li>
                 </ul>
-                <a href="https://invoice.infinitepay.io/plans/alek-sandro/l2vJQPuKP" class="btn-outline">Assinar Semestral</a>
+                <a href="https://invoice.infinitepay.io/plans/alek-sandro/l2vJQPuKP" class="btn-primary">Assinar Semestral</a>
             </div>
             
         </div>
     </section>
 
-   <section class="contato" id="contato">
+    <section class="contato" id="contato">
         <div class="container form-container hidden">
             <h2>Tem interesse, mas ainda tem dúvidas?</h2>
             <p>Preencha os dados abaixo. Nossa equipe entrará em contato para entender como podemos te ajudar.</p>
@@ -210,14 +180,12 @@
             <form action="https://script.google.com/macros/s/AKfycbzJGTRjzfj8JAy_iXRAOh9L4aDqrqm8CUA9kU-Coml30Obsmy_UqJGaOqS7wwdfCZtxKA/exec" method="POST" target="hidden_iframe" class="lead-form" id="meuFormulario">
                 <input type="text" name="nome" placeholder="Seu Nome Completo" required>
                 <input type="tel" name="whatsapp" placeholder="Seu WhatsApp (com DDD)" required>
-                
                 <button type="submit" class="btn-primary btn-full" id="btnEnviar">Quero falar com a equipe</button>
             </form>
 
             <div id="mensagemSucesso" class="msg-sucesso">
                 ✅ Dados enviados com sucesso! <br>A equipe de suporte do Paulo entrará em contato com você no WhatsApp em breve.
             </div>
-
         </div>
     </section>
 
@@ -225,7 +193,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-   <script>
+    <script>
         // 1. EFEITO DE MOVIMENTO AO ROLAR (FADE-IN)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -237,10 +205,10 @@
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
 
-        // 2. VALIDAÇÃO E MÁSCARAS (Proteção do Formulário)
+        // 2. VALIDAÇÃO E MÁSCARAS
         const inputNome = document.querySelector('input[name="nome"]');
         inputNome.addEventListener('input', function() {
-            this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, ''); // Bloqueia números
+            this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, ''); 
         });
 
         const inputWhatsapp = document.querySelector('input[name="whatsapp"]');
@@ -255,41 +223,39 @@
                 if (numeros.length > 0) formatado += '(' + numeros.substring(0, 2);
                 if (numeros.length > 2) formatado += ') ' + numeros.substring(2, 7);
                 if (numeros.length > 7) formatado += '-' + numeros.substring(7, 11);
-                this.value = formatado; // Aplica máscara do Brasil
+                this.value = formatado; 
             }
         });
 
-     // 3. ENVIO DOS DADOS (À PROVA DE FALHAS COM IFRAME)
+        // 3. ENVIO DOS DADOS (FORMULÁRIO)
         document.getElementById("meuFormulario").addEventListener("submit", function() {
-            // Repare que tiramos o preventDefault. O navegador vai enviar de verdade agora!
             const form = document.getElementById("meuFormulario");
             const btn = document.getElementById("btnEnviar");
             
             btn.innerText = "Enviando dados..."; 
             
-            // Espera 1.5 segundos para dar tempo do Google receber, esconde o formulário e mostra o sucesso
             setTimeout(() => {
                 form.style.display = "none"; 
                 document.getElementById("mensagemSucesso").style.display = "block"; 
             }, 1500);
         }); 
 
-    </script>
-    <!-- SCRIPT DO CARROSSEL DE DIFERENCIAIS -->
-    <script>
-        const pista = document.getElementById('pistaDiferenciais');
-        const setaEsq = document.getElementById('setaEsq');
-        const setaDir = document.getElementById('setaDir');
-
-        // Calcula a largura de um card + o espaço (gap) para saber o quanto pular
-        const scrollAmount = 340; 
-
-        setaDir.addEventListener('click', () => {
-            pista.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        // 4. CARROSSEL DE DIFERENCIAIS
+        const pistaDif = document.getElementById('pistaDiferenciais');
+        document.getElementById('setaDir').addEventListener('click', () => {
+            pistaDif.scrollBy({ left: 340, behavior: 'smooth' });
+        });
+        document.getElementById('setaEsq').addEventListener('click', () => {
+            pistaDif.scrollBy({ left: -340, behavior: 'smooth' });
         });
 
-        setaEsq.addEventListener('click', () => {
-            pista.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        // 5. CARROSSEL DE RESULTADOS
+        const pistaRes = document.getElementById('pistaResultados');
+        document.getElementById('setaDirResultados').addEventListener('click', () => {
+            pistaRes.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+        document.getElementById('setaEsqResultados').addEventListener('click', () => {
+            pistaRes.scrollBy({ left: -350, behavior: 'smooth' });
         });
     </script>
 </body>
