@@ -3,34 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento Confirmado | Paulo Personal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pagamento Aprovado | Paulo Personal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        /* 1. RESET TOTAL DE ROLAGEM */
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+            overflow-x: hidden;
+            overflow-y: auto !important; /* FORÇA a barra de rolagem a existir */
+        }
+
+        /* 2. ENVELOPE INVISÍVEL (A SOLUÇÃO) 
+           O 'flex-start' garante que o cartão comece do topo e cresça para baixo,
+           forçando o celular a deixar você rolar até o fim. */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            min-height: 100%; 
+            padding: 50px 20px; /* 50px de espaço em cima e embaixo, 20px nas laterais */
+        }
+
+        /* 3. SEU CARTÃO INTACTO */
+        .sucesso-container {
+            background-color: #111;
+            border: 2px solid #FCA311;
+            border-radius: 12px;
+            padding: 35px 25px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+        }
+
+        .icon-check {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .sucesso-container h1 {
+            color: #FCA311;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .instrucoes-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .instrucoes-box h3 {
+            color: #FCA311;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .instrucoes-box p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .btn-wpp {
+            background-color: #25D366;
+            color: #000;
+            padding: 15px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-wpp:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <!-- Envolvemos seu cartão nessa div wrapper -->
+    <div class="wrapper">
+        <div class="sucesso-container">
+            <div class="icon-check">✅</div>
+            <h1>Pagamento Confirmado!</h1>
+            
+            <div class="instrucoes-box">
+                <h3>Falta só mais um passo:</h3>
+                <p><span>1️⃣</span> Clique no botão verde abaixo para chamar nossa equipe no WhatsApp.</p>
+                <p><span>2️⃣</span> Mande um "Oi" para liberarmos seu acesso e começarmos a montar seu treino!</p>
+            </div>
 
-    <section class="sucesso-container">
-        <div class="icon-check">✅</div>
-        <h1>PAGAMENTO APROVADO!</h1>
-        <p>Seja muito bem-vindo(a) ao time Paulo Personal. Sua transformação começa agora.</p>
-
-        <div class="instrucoes-box">
-            <h3>⚠️ IMPORTANTE: Sobre sua Avaliação Física</h3>
-            <p>Para montarmos seu treino com perfeição, usaremos uma Inteligência Artificial para analisar sua composição corporal. Para o sistema funcionar, você precisará tirar fotos seguindo estas <strong>3 regras</strong>:</p>
-            <ul>
-                <li><span>☀️</span> <strong>Iluminação:</strong> Fique de frente para uma janela ou em um ambiente muito claro. Evite sombras que escondam o formato do corpo.</li>
-                <li><span>🟦</span> <strong>Fundo Neutro:</strong> Fique de pé em frente a uma parede lisa e clara. Sem móveis, portas ou objetos atrás de você.</li>
-                <li><span>🩳</span> <strong>Roupas Curtas:</strong> A IA precisa "ler" você. Homens (apenas bermuda ou sunga). Mulheres (top e short curto). Prenda o cabelo, se for comprido.</li>
-            </ul>
+            <a href="https://wa.me/5521985199932?text=Oi%20Paulo!%20Acabei%20de%20assinar%20a%20consultoria%20e%20vim%20começar%20meu%20treino!" class="btn-wpp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 25px;"> 
+                FALAR COM EQUIPE!
+            </a>
         </div>
-
-        <p style="margin-bottom: 20px; font-weight: 600;">Tudo entendido? Clique no botão abaixo para me chamar no WhatsApp e pegar o link da avaliação!</p>
-
-        <a href="https://wa.me/5521985199932?text=Fala%20Paulo!%20Acabei%20de%20assinar%20a%20consultoria%20e%20estou%20pronto%20para%20fazer%20minha%20avalia%C3%A7%C3%A3o." class="btn-wpp" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" height="24">
-            CHAMAR NO WHATSAPP
-        </a>
-    </section>
-
+    </div>
 </body>
 </html>

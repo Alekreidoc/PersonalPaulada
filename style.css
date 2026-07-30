@@ -125,10 +125,10 @@ h1, h2, h3 {
 
 /* --- IMAGEM DO SÍMBOLO --- */
 .header .logo img {
-    height: 45px; /* Altura CRAVADA para impedir que fique gigante no celular */
+    height: 45px; 
     width: auto;
     display: block;
-    z-index: 2; /* Garante que a imagem fique por cima do texto */
+    z-index: 2; 
     position: relative;
 }
 
@@ -136,26 +136,23 @@ h1, h2, h3 {
 .logo-texto {
     font-size: 1.2rem;
     letter-spacing: 2px;
-    white-space: nowrap; /* Impede que o texto quebre para a linha de baixo */
+    white-space: nowrap; 
     overflow: hidden;
     
-    /* Configuração inicial (texto escondido atrás da imagem) */
     opacity: 0;
     max-width: 0;
     margin-left: 0;
     transform: translateX(-30px);
     
-    /* Dispara a animação 'deslizarTexto' */
     animation: deslizarTexto 1.2s ease forwards;
-    animation-delay: 0.8s; /* Espera quase 1 segundo antes de começar a sair */
+    animation-delay: 0.8s;
 }
 
-/* --- O MOTOR DA ANIMAÇÃO --- */
 @keyframes deslizarTexto {
     to {
         opacity: 1;
         max-width: 200px;
-        margin-left: 15px; /* Abre 15px de espaço entre a foto e o texto */
+        margin-left: 15px; 
         transform: translateX(0);
     }
 }
@@ -174,7 +171,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 .hero {
-    padding-top: 75px; /* Altura exata para o menu preto não cobrir o topo da foto */
+    padding-top: 75px; 
     display: flex;
     justify-content: center;
 }
@@ -624,17 +621,16 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    /* Menu no celular: pequenos ajustes para caber tudo */
     header .container {
         padding-left: 15px;
         padding-right: 15px;
         gap: 10px; 
     }
     .header .logo img {
-        height: 35px; /* Deixa o símbolo menorzinho no celular para não espremer a tela */
+        height: 35px; 
     }
     .logo-texto {
-        font-size: 0.9rem !important; /* Diminui o texto da animação para caber perfeito */
+        font-size: 0.9rem !important; 
         letter-spacing: 1px;
     }
     header .btn-primary, 
@@ -645,7 +641,6 @@ html, body {
         white-space: nowrap; 
     }
 
-    /* Outras adaptações */
     .hero-content, .nutri-content, .cards-grid {
         flex-direction: column;
     }
