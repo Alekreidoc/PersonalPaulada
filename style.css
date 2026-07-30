@@ -125,7 +125,7 @@ h1, h2, h3 {
 
 /* --- IMAGEM DO SÍMBOLO --- */
 .header .logo img {
-    max-height: 45px;
+    height: 45px; /* Altura CRAVADA para impedir que fique gigante no celular */
     width: auto;
     display: block;
     z-index: 2; /* Garante que a imagem fique por cima do texto */
@@ -167,9 +167,6 @@ h1, h2, h3 {
 }
 
 /* --- 2. HERO SECTION --- */
-/* --- 2. HERO SECTION --- */
-/* --- 2. HERO SECTION --- */
-/* Garantindo que a foto do Paulo fique responsiva e centralizada em qualquer tela */
 .hero img {
     max-width: 100%;
     height: auto;
@@ -182,10 +179,19 @@ h1, h2, h3 {
     justify-content: center;
 }
 
-/* Zerando o espaçamento padrão do container apenas nesta seção para a foto subir */
 .hero .container {
     padding-top: 0; 
     padding-bottom: 20px;
+}
+
+/* --- SEÇÃO MÉTODO DN --- */
+.metodo-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    display: block;
 }
 
 /* --- 3. SEÇÃO DA NUTRICIONISTA --- */
@@ -360,7 +366,7 @@ h1, h2, h3 {
     display: block;
 }
 
-/* --- ESTILOS DAS SETAS (COMUM PARA OS 2 CARROSSEIS) --- */
+/* --- ESTILOS DAS SETAS --- */
 .seta-carrossel {
     background-color: var(--primary-color);
     color: #000;
@@ -483,6 +489,44 @@ h1, h2, h3 {
     font-size: 0.9rem;
 }
 
+/* --- CARTÕES INVERTIDOS --- */
+.card.pricing-card-inverted {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.card.pricing-card-inverted h3 {
+    color: #000000 !important; 
+}
+.card.pricing-card-inverted .price,
+.card.pricing-card-inverted .price span,
+.card.pricing-card-inverted .price-subtitle,
+.card.pricing-card-inverted p,
+.card.pricing-card-inverted .features li {
+    color: #ffffff !important; 
+}
+.card.pricing-card-inverted .features li::before {
+    color: #000000 !important; 
+}
+.card.pricing-card-inverted .badge {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
+}
+.card.pricing-card-inverted .btn-primary {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
+}
+.card.pricing-card-inverted .btn-primary:hover {
+    background-color: #222222 !important;
+}
+.card.pricing-card-inverted .btn-outline {
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+.card.pricing-card-inverted .btn-outline:hover {
+    background-color: #000000 !important;
+    color: var(--primary-color) !important;
+}
+
 /* --- 8. FORMULÁRIO E CONTATO --- */
 .contato {
     background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('../img/desejada.png');
@@ -561,7 +605,7 @@ h1, h2, h3 {
     transform: scale(1.1);
 }
 
-/* --- EFEITO DE MOVIMENTO AO ROLAR (FADE-IN) --- */
+/* --- EFEITO FADE-IN --- */
 .hidden {
     opacity: 0;
     transform: translateY(30px); 
@@ -573,90 +617,47 @@ h1, h2, h3 {
     transform: translateY(0); 
 }
 
-/* --- PÁGINA DE SUCESSO (sucesso.html) --- */
-.sucesso-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #111; 
-    color: #fff;
-}
-.icon-check {
-    font-size: 5rem;
-    margin-bottom: 20px;
-}
-.instrucoes-box {
-    background: #1a1a1a;
-    border-left: 4px solid var(--primary-color); 
-    padding: 25px;
-    margin: 30px 0;
-    max-width: 600px;
-    text-align: left;
-    border-radius: 8px;
-}
-.instrucoes-box h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    margin-top: 0;
-    font-size: 1.3rem;
-}
-.instrucoes-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.instrucoes-box li {
-    margin-bottom: 15px;
-    line-height: 1.5;
-    display: flex;
-    align-items: flex-start;
-}
-.instrucoes-box li span {
-    font-size: 1.5rem;
-    margin-right: 12px;
-}
-.btn-wpp {
-    background-color: #25D366; 
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.3s ease;
-}
-.btn-wpp:hover {
-    transform: scale(1.05);
-}
-.sucesso-container h1 {
-    color: var(--primary-color);
+/* --- RESPONSIVIDADE (CELULARES) --- */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
-/* --- RESPONSIVIDADE (CELULARES) --- */
 @media (max-width: 768px) {
+    /* Menu no celular: pequenos ajustes para caber tudo */
+    header .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 10px; 
+    }
+    .header .logo img {
+        height: 35px; /* Deixa o símbolo menorzinho no celular para não espremer a tela */
+    }
+    .logo-texto {
+        font-size: 0.9rem !important; /* Diminui o texto da animação para caber perfeito */
+        letter-spacing: 1px;
+    }
+    header .btn-primary, 
+    header .btn-outline,
+    header a {
+        font-size: 0.7rem !important;
+        padding: 8px 10px !important;
+        white-space: nowrap; 
+    }
+
+    /* Outras adaptações */
     .hero-content, .nutri-content, .cards-grid {
         flex-direction: column;
     }
-    
     .hero-text h1 {
         font-size: 2.2rem;
     }
-    
     .pricing-card.destaque {
         transform: scale(1); 
     }
-    
     .pricing-card.destaque:hover {
         transform: translateY(-5px);
     }
-
     .seta-esquerda, .seta-direita {
         width: 35px;
         height: 35px;
@@ -668,95 +669,4 @@ h1, h2, h3 {
     .diferencial-card {
         min-width: 280px; 
     }
-}
-/* --- CARTÕES INVERTIDOS (TRIMESTRAL E SEMESTRAL) --- */
-.card.pricing-card-inverted {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
-/* Onde era laranja vira preto */
-.card.pricing-card-inverted h3 {
-    color: #000000 !important; 
-}
-
-/* Onde era branco continua branco */
-.card.pricing-card-inverted .price,
-.card.pricing-card-inverted .price span,
-.card.pricing-card-inverted .price-subtitle,
-.card.pricing-card-inverted p,
-.card.pricing-card-inverted .features li {
-    color: #ffffff !important; 
-}
-
-/* O checkzinho (✓) vira preto */
-.card.pricing-card-inverted .features li::before {
-    color: #000000 !important; 
-}
-
-/* Ajuste da etiqueta "Recomendado" para o fundo laranja */
-.card.pricing-card-inverted .badge {
-    background-color: #000000 !important;
-    color: var(--primary-color) !important;
-}
-
-/* Ajuste dos botões dentro do cartão laranja */
-.card.pricing-card-inverted .btn-primary {
-    background-color: #000000 !important;
-    color: var(--primary-color) !important;
-}
-
-.card.pricing-card-inverted .btn-primary:hover {
-    background-color: #222222 !important;
-}
-
-.card.pricing-card-inverted .btn-outline {
-    border-color: #000000 !important;
-    color: #000000 !important;
-}
-
-.card.pricing-card-inverted .btn-outline:hover {
-    background-color: #000000 !important;
-    color: var(--primary-color) !important;
-}
-/* --- CORREÇÃO DO CABEÇALHO NO CELULAR --- */
-
-/* Trava de segurança: impede que qualquer elemento alargue a página no celular */
-html, body {
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-@media (max-width: 768px) {
-    /* Ajusta o espaçamento interno do cabeçalho */
-    header .container {
-        padding-left: 15px;
-        padding-right: 15px;
-        gap: 10px; /* Reduz o espaço entre o logo e o botão */
-    }
-
-    /* Diminui o texto "PAULO COACH" no celular */
-    header .logo, 
-    header h1,
-    header h2 {
-        font-size: 1.1rem !important;
-    }
-
-    /* Diminui o botão "IR PARA OS PLANOS" para caber na tela */
-    header .btn-primary, 
-    header .btn-outline,
-    header a {
-        font-size: 0.7rem !important;
-        padding: 8px 10px !important;
-        white-space: nowrap; /* Impede que o texto do botão quebre em duas linhas */
-    }
-}
-/* --- IMAGEM DO MÉTODO DN COM MOLDURA PADRÃO --- */
-.metodo-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    display: block;
 }
