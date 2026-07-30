@@ -115,13 +115,52 @@ h1, h2, h3 {
     padding: 15px 20px;
 }
 
+/* --- CONTAINER DA LOGO --- */
 .logo {
+    display: flex;
+    align-items: center;
     color: var(--text-title);
     font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
 }
 
+/* --- IMAGEM DO SÍMBOLO --- */
+.header .logo img {
+    max-height: 45px;
+    width: auto;
+    display: block;
+    z-index: 2; /* Garante que a imagem fique por cima do texto */
+    position: relative;
+}
+
+/* --- TEXTO ANIMADO SAINDO DA IMAGEM --- */
+.logo-texto {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Impede que o texto quebre para a linha de baixo */
+    overflow: hidden;
+    
+    /* Configuração inicial (texto escondido atrás da imagem) */
+    opacity: 0;
+    max-width: 0;
+    margin-left: 0;
+    transform: translateX(-30px);
+    
+    /* Dispara a animação 'deslizarTexto' */
+    animation: deslizarTexto 1.2s ease forwards;
+    animation-delay: 0.8s; /* Espera quase 1 segundo antes de começar a sair */
+}
+
+/* --- O MOTOR DA ANIMAÇÃO --- */
+@keyframes deslizarTexto {
+    to {
+        opacity: 1;
+        max-width: 200px;
+        margin-left: 15px; /* Abre 15px de espaço entre a foto e o texto */
+        transform: translateX(0);
+    }
+}
+
+/* --- BOTÃO DO CABEÇALHO --- */
 .header .btn-primary {
     padding: 5px 14px;
     font-size: 0.85rem;
